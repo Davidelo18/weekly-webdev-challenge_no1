@@ -1,0 +1,173 @@
+/* reseting basic styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    background-image: url('../includes/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font: 18px 'Roboto', sans-serif;
+    color: #ffffff;
+}
+
+/* make images responsive */
+img{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+/* place a logo in the middle */
+header{
+    display: flex;
+    justify-content: center;
+}
+
+/* logo */
+header img,
+main img{opacity: .5}
+
+/* MAIN PART OF THE SITE */
+main{
+    display: flex;
+    justify-content: center;
+}
+
+/* page is seperated on 2 columns */
+.main-column{
+    display: flex;
+    width: 40vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* stores the header and form */
+.form-div{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+/* every header */
+main h1{
+    text-align: center;
+    text-shadow: 2px 1px #000000;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+/* form wrapper to make a transparent border */
+.form-container{
+    border: 18px solid rgba(0, 0, 0, .3);
+    border-radius: 6px;
+}
+
+/* actually form :) */
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+form input{
+    border-radius: 6px;
+    outline: none;
+}
+
+/* adding margin to inputs (not checkboxes and btns) */
+form input[type=text],
+form input[type=password],
+textarea{
+    margin-top: 20px;
+    padding: 10px;
+}
+
+form input[type=text]:first-child,
+form input[type=password]:first-child{
+    margin: 0;
+}
+
+/* styling checkboxes */
+form label{
+    display: flex;
+    margin: 10px 0;
+    color: #5a5a5a;
+    font-size: .85rem;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+form input[type="checkbox"]{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    -webkit-appearance: none; 
+    background-color: transparent;
+    border: 1px solid gray;
+    margin-right: 5px; 
+}
+
+form input:checked[type="checkbox"]::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 12px;
+    height: 12px;
+    background-color: aquamarine;
+    border-radius: 2px;
+}
+
+/* every button */
+form .form-btn{
+    padding: 10px;
+    font-size: 1rem;
+    background-color: rgb(142, 205, 39);
+    border: 1px solid rgb(59, 154, 0);
+    color: #ffffff;
+    border-radius: 6px;
+    transition: background-color .3s;
+}
+
+form .form-btn:hover{
+    background-color: rgb(115, 178, 12);
+    cursor: pointer;
+}
+
+form .no-mrgn{margin: 0}
+
+/* styling the buttons which are next to each other */
+form .btn-group{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* styling the textarea */
+form textarea{
+    font-family: inherit;
+    height: 200px;
+}
+
+form .btn-group .form-btn{width: 45%}
+
+/* btns with other bg-colors */
+form .done-btn{
+    background-color: rgb(190, 213, 153);
+    border-color: rgb(143, 202, 108);
+}
+form .done-btn:hover{background-color: rgb(175, 198, 138)}
+
+form .nothx-btn{
+    background-color: rgb(245, 78, 96);
+    border-color: rgb(162, 32, 42);
+}
+form .nothx-btn:hover{background-color: rgb(215, 48, 66)}
